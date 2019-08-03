@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'SF-Bold';
+    src: url("assets/Fonts/SF-Compact-Display-Bold.otf");
+}
+@font-face {
+    font-family: 'SF-Compact';
+    src: url("assets/Fonts/SF-Compact-Display-Regular.otf");
+}
+h1 {
+    font-family: 'SF-Bold' !important;
+}
+p{
+    font-family: 'SF-Compact' !important;
+}
+.btn{
+    font-family: 'SF-Compact' !important;
+    font-weight: bold !important;
+    font-size: small !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+}
+.text-selection-off{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.loadingDiv{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 11;
+    background-color: rgba(255, 255, 255, 0.6)
+}

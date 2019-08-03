@@ -1,0 +1,26 @@
+$color-red: #FF0042;
+
+h1{
+    font-size: 2.5em;
+}
+.outline {
+    background-color: transparent;
+    border-color: $color-red;
+    color: inherit;
+    transition: all .25s;
+}
+.btn-danger-outline {
+    color: $color-red;
+    border: solid 2px  $color-red;
+}
+.btn-danger-outline:hover {
+    color: #FFF;
+    cursor: pointer;
+    background-color: $color-red;
+}
+.text-selection-off{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

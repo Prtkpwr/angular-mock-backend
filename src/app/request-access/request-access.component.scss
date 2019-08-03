@@ -1,0 +1,20 @@
+$color-red: #FF0042;
+
+h1{
+    font-size: 2.5em;
+}
+.outline {
+    background-color: transparent;
+    border-color: $color-red;
+    color: inherit;
+    transition: all .25s;
+}
+.btn-danger-outline {
+    color: $color-red !important;
+    border: solid 2px  $color-red;
+}
+.btn-danger-outline:hover {
+    color: #FFF !important;
+    cursor: pointer;
+    background-color: $color-red;
+}

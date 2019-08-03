@@ -1,0 +1,45 @@
+<div class="loadingDiv" *ngIf="loadingDiv">
+  <img src="assets/loader.gif" style="position: absolute;left: 48%;top: 40%;height: 75px;" alt="">
+</div>
+<div class="container">
+  <div style="text-align:center;" class="text-selection-off">
+    <img src="assets/Signup.png" alt="" srcset="" style="height: 30px;margin-top: 2em;">
+  </div>
+  <div style="text-align:center;" class="text-selection-off">
+    <p style="margin-bottom:0px;margin-top:0px;font-size: smaller;">
+      Please confirm or edit your contact information, so that we can
+    </p>
+    <p style="margin-top:0px;font-size: smaller;">
+      notify you when you are approved for our BETA.
+    </p>
+  </div>
+  <hr>
+  <div class="row" style="margin-top:3rem;">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <label class="form-label text-selection-off" for="" style="color:#9A9EA0;">NAME</label>
+      <input type="text" [(ngModel)]="name" class="form-control" disabled>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row" style="margin-top:15px;">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <label class="form-label text-selection-off" for="" style="color:#9A9EA0;">EMAIL</label>
+      <input type="text" [(ngModel)]="email" class="form-control" disabled>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row" style="margin-top:15px;">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <label class="form-label text-selection-off" for="" style="color:#9A9EA0;">PHONE NUMBER</label>
+      <input type="text" [(ngModel)]="phoneNumber" [ngClass]="{'danger-input':!phoneNumberValue}" class="form-control" placeholder="Type a phone number">
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+  <div style="text-align:center; margin-top:10%;">
+    <a class="btn outline btn-danger-outline" style="line-height: 25px;border-radius: .1rem;height: 40px;font-weight: bold;width:150px;"
+      (click)="signUpFunction()">SIGN UP</a>
+  </div>
+</div>
