@@ -21,30 +21,27 @@ export class SignupComponent implements OnInit {
     this.email = "john@requantive.com"
   }
   signUpFunction() {
-    this.loadingDiv = true;
     let self = this
-    setTimeout(function () {
-      if (self.phoneNumber) {
-        self.phoneNumberValue = true;
-        self.loadingDiv = false;
-        let data = {
-          name: this.name,
-          email: this.email,
-          phone: this.phoneNumber
-        }
+    if (self.phoneNumber) {
+      self.phoneNumberValue = true;
+      let data = {
+        name: self.name,
+        email: self.email,
+        phone: self.phoneNumber
+      }
+      self.loadingDiv = true;
         self.HttpService.signUp(data).subscribe((res) => {
           console.log(res)
+          self.loadingDiv = false;
           //redirecting to thank you page on success
           self.Router.navigate(["/request-success"])
         }, (err) => {
-          //redirecting to thank you page on error as there is no backend connected for now
-          self.Router.navigate(["/request-success"])
+          self.loadingDiv = false;
           console.log(err)
         })
       } else {
         self.phoneNumberValue = false;
         self.loadingDiv = false;
       }
-    }, 2000)
   }
 }
